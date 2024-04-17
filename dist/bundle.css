@@ -1,0 +1,837 @@
+:root {
+  --main-text: #000;
+  --body-text: #333;
+  --s-text: #666;
+  --xs-text: #999;
+  --header-background: #fff;
+  --fact-background: #f2f2f2;
+  --subtext: #00000080;
+  --main-line: #e5e5e5;
+  --dark-line: #00000040;
+  --advertisement-text: #454545;
+  --advertisement-line: #0000001a;
+  --advertisement-topline: #ccc;
+  --title-color: #262626;
+  --link-color: #326891;
+  --link-opacity: #32689140;
+  --main-font: "PT Serif";
+  --link-font: "Roboto";
+  --title-font: "Montserrat";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+img,
+svg,
+video {
+  display: block;
+}
+
+body {
+  margin: 0;
+  color: var(--body-text);
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: var(--header-background);
+  inline-size: 100%;
+}
+
+.header__block {
+  display: flex;
+  align-items: center;
+}
+
+.header__link {
+  margin-inline-start: 5px;
+  color: var(--subtext);
+  font-family: var(--link-font);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.header__home__img {
+  object-fit: contain;
+  object-position: center;
+  inline-size: 16px;
+  block-size: 16px;
+}
+
+.header__logo__img {
+  object-fit: contain;
+  object-position: center;
+  inline-size: 163px;
+  block-size: 30px;
+}
+
+.header__main__link {
+  margin-inline-start: 20px;
+  border-inline-start: 1px solid var(--dark-line);
+  padding-inline-start: 20px;
+  color: var(--main-text);
+  font-family: var(--link-font);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.875rem;
+  text-transform: uppercase;
+}
+
+.header__hidden__link {
+  display: none;
+  margin-inline-start: 10px;
+  border-inline-start: 1px solid var(--dark-line);
+  padding-inline-start: 10px;
+  color: var(--main-text);
+  font-family: var(--main-font);
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.header__main__link:hover {
+  text-decoration: underline;
+}
+
+.header__share__img {
+  object-fit: contain;
+  object-position: center;
+  inline-size: 20px;
+  block-size: 20px;
+}
+
+.main {
+  margin: 0 auto;
+  max-inline-size: 1230px;
+  counter-reset: card 26;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: 70px;
+  margin-block-end: 89px;
+  border-block-end: 1px solid var(--main-line);
+  padding-block-end: 63px;
+}
+
+.title {
+  margin: 20px 0;
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-weight: 900;
+  font-size: 89px;
+  line-height: 90px;
+  max-inline-size: 600px;
+}
+
+.main__videos {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 4px;
+}
+
+.main__video {
+  inline-size: 23%;
+}
+
+.hidden__video {
+  display: none;
+  padding: 0 20px;
+  inline-size: 100vw;
+}
+
+.languages {
+  margin: 15px 0;
+  inline-size: 600px;
+}
+
+.language {
+  position: relative;
+  display: inline-block;
+  color: var(--link-color);
+  font-family: var(--link-font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.language:first-child {
+  margin-inline-end: 31px;
+}
+
+.language:first-child::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -16px;
+  display: block;
+  border-inline-end: 1px solid var(--main-line);
+  inline-size: 1px;
+  block-size: 30px;
+}
+
+.language:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.author {
+  margin: 0 auto;
+  margin-block-end: 60px;
+  max-inline-size: 600px;
+}
+
+.top__text {
+  position: relative;
+  margin-block-end: 40px;
+}
+
+.first__letter {
+  position: absolute;
+  top: -11px;
+  left: -85px;
+  font-family: var(--title-font);
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 90px;
+}
+
+.author__sub {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.top__author_img {
+  margin-inline-start: 30px;
+  object-fit: contain;
+  object-position: center;
+  block-size: auto;
+  max-inline-size: 180px;
+}
+
+.top__author__title {
+  margin-block-end: 11px;
+  color: var(--s-text);
+  font-size: 15px;
+  line-height: 1.47;
+}
+
+.top__author__subtitle {
+  color: var(--xs-text);
+  font-family: var(--link-font);
+  font-weight: 500;
+}
+
+.card {
+  margin: 0 auto;
+  margin-block-start: 45px;
+  margin-block-end: 35px;
+  max-inline-size: 1230px;
+  counter-increment: card -1;
+}
+
+.card__video {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  aspect-ratio: 1.777 / 1;
+}
+
+.card__video__right {
+  object-position: center right;
+}
+
+.card__title {
+  position: relative;
+  margin: 47px auto 0;
+  margin-bottom: -8px;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  max-inline-size: 600px;
+}
+
+.card__title::before {
+  content: counter(card);
+  position: absolute;
+  bottom: 170px;
+  left: 0;
+  z-index: 10;
+  color: var(--header-background);
+  font-family: var(--title-font);
+  font-weight: 900;
+  font-size: 133px;
+  line-height: 64px;
+}
+
+.card__subtitle {
+  margin: 0 auto;
+  color: var(--xs-text);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.45;
+  max-inline-size: 600px;
+}
+
+.card__text {
+  position: relative;
+  margin: 49px auto 0;
+  max-inline-size: 600px;
+}
+
+.card__about {
+  margin-block-end: 25px;
+  border-block-end: 1px solid var(--main-line);
+  padding-block-end: 22px;
+}
+
+.fact {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: block;
+  margin-inline-start: 30px;
+  border-inline-start: 1px solid var(--main-line);
+  padding-inline-start: 29px;
+  color: var(--s-text);
+  font-size: 17px;
+  line-height: 22px;
+  inline-size: 190px;
+}
+
+.fact__author {
+  margin: 0 0 11px -20px;
+  object-fit: contain;
+  object-position: center;
+  block-size: auto;
+  max-inline-size: 190px;
+}
+
+.fact__text__only {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: block;
+  margin-inline-start: 30px;
+  border-inline-start: 1px solid var(--main-line);
+  padding-inline-start: 29px;
+  color: var(--body-text);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.45;
+  inline-size: 190px;
+}
+
+.opinion__text {
+  position: relative;
+  margin-block-end: 16px;
+}
+
+.opinion__title {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  display: block;
+  margin-inline-end: 32px;
+  color: var(--s-text);
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: right;
+  inline-size: 185px;
+}
+
+.card__link {
+  border-block-end: 1px solid var(--link-opacity);
+  color: var(--link-color);
+  font-family: var(--link-font);
+  font-size: 15px;
+  line-height: 22px;
+  transition: border 0.3s ease-out;
+}
+
+.card__link:hover {
+  border-block-end: 1px solid var(--link-color);
+}
+
+.advertisement {
+  margin: 0 auto;
+  margin-block-start: 70px;
+  border-block-start: 1px solid var(--main-line);
+  padding: 40px 0;
+  transition: all 0.35s ease-in-out;
+  max-inline-size: 1230px;
+}
+
+.advertisement__link {
+  display: block;
+  margin: 0 auto;
+  max-inline-size: 600px;
+}
+
+.advertisement__link::before {
+  content: "";
+  display: block;
+  background: url("https://static01.nyt.com/images/2016/12/16/arts/fences-trailer/fences-trailer-articleLarge.jpg")
+    center/cover no-repeat;
+  max-inline-size: 600px;
+  block-size: 338px;
+}
+
+.advertisement__subtitle {
+  display: block;
+  margin: 15px 0 20px;
+  color: var(--advertisement-text);
+  font-family: var(--link-font);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.advertisement__title {
+  display: block;
+  color: var(--body-text);
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-decoration: 1px underline;
+  text-decoration-color: var(--advertisement-line);
+  text-underline-offset: 8px;
+  transition: text-decoration 0.3s ease-out;
+}
+
+.advertisement__link:hover .advertisement__title {
+  text-decoration-color: var(--body-text);
+}
+
+.advertisement__text {
+  margin-block-end: 16px;
+  opacity: 0.8;
+  color: var(--body-text);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.advertisement__hidden {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1050px;
+  margin: 0 auto 16px;
+  border-top: 1px solid var(--main-line);
+  padding-block-start: 9px;
+}
+
+.footer__list {
+  display: flex;
+}
+
+.footer__list__item:first-of-type {
+  display: block;
+  padding-inline-end: 5px;
+}
+
+.footer__list__item:not(:first-of-type) {
+  display: block;
+  height: 10px;
+  border-left: 1px solid var(--main-line);
+  padding: 0 5px;
+}
+
+.footer__list__link {
+  display: block;
+  color: var(--xs-text);
+  font-family: var(--link-font);
+  font-weight: 400;
+  font-size: 0.6875rem;
+  line-height: 10px;
+}
+
+.footer__list__link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1079px) {
+  .header__logo {
+    display: none;
+  }
+
+  .header {
+    justify-content: start;
+  }
+
+  .header__block:last-child {
+    margin-left: auto;
+  }
+
+  .header__main__link {
+    margin-inline-start: 100px;
+    border-inline-start: none;
+    padding-inline-start: 0;
+  }
+
+  .header__hidden__link {
+    display: block;
+  }
+
+  .card__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card__about {
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+
+  .fact {
+    position: static;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    border-inline-start: none;
+    border-block-start: 1px solid var(--main-line);
+    border-block-end: 1px solid var(--main-line);
+    padding: 16px 0 32px;
+    font-style: italic;
+    inline-size: 100%;
+  }
+
+  .fact__author {
+    margin: 0 0 0 30px;
+    max-inline-size: 34%;
+  }
+
+  .fact__text__only {
+    position: static;
+    margin: 0;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    inline-size: 100%;
+  }
+
+  .opinion__text {
+    margin: 0;
+  }
+
+  .opinion__title {
+    position: static;
+    display: flex;
+    align-items: center;
+    float: left;
+    margin: 0;
+    font-style: italic;
+    inline-size: max-content;
+  }
+
+  .opinion__title::after {
+    content: " – ";
+    display: block;
+    margin: 0 5px;
+    inline-size: auto;
+  }
+
+  .card__link {
+    inline-size: max-content;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    max-inline-size: 900px;
+  }
+
+  .footer__list:first-of-type {
+    margin-block-end: 1em;
+  }
+}
+
+@media (max-width: 959px) {
+  .header__link {
+    display: none;
+  }
+
+  .title {
+    font-size: 46px;
+    line-height: 48px;
+  }
+
+  .main__videos {
+    display: none;
+  }
+
+  .hidden__video {
+    display: block;
+  }
+
+  .top {
+    margin: 0 20px 38px;
+    padding-block-end: 15px;
+  }
+
+  .languages {
+    inline-size: auto;
+  }
+
+  .author {
+    margin-block-end: 0;
+    padding: 0 20px;
+  }
+
+  .card__video {
+    aspect-ratio: 1.334 / 1;
+  }
+
+  .card__title {
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto 0;
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .card__title::before {
+    position: static;
+    margin-bottom: 0;
+    padding-block-end: 10px;
+    color: var(--body-text);
+    font-family: var(--title-font);
+    font-size: 61px;
+    line-height: 55px;
+  }
+
+  .card__subtitle {
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .card__text {
+    padding: 0 20px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .fact__text__only {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .opinion__title {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .advertisement {
+    margin: 70px 20px 0;
+    padding: 22px 0 20px;
+  }
+
+  .advertisement__title {
+    margin-block-end: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22222;
+    text-decoration: none;
+  }
+
+  .advertisement__text {
+    opacity: 1;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .header__main__link {
+    margin-inline-start: 20px;
+    border-inline-start: 1px solid var(--dark-line);
+    padding-inline-start: 20px;
+  }
+
+  .header__hidden__link {
+    display: none;
+  }
+
+  .top {
+    padding-block-end: 24px;
+  }
+
+  .languages {
+    margin-right: auto;
+  }
+
+  .language {
+    display: block;
+  }
+
+  .language:first-child {
+    margin: 0 0 9px;
+  }
+
+  .language:first-child::after {
+    display: none;
+  }
+
+  .author {
+    margin-block-end: 27px;
+    padding: 0 20px;
+  }
+
+  .top__text {
+    margin-block-end: 1rem;
+    border-block-end: 1px solid var(--main-line);
+    padding-block-end: 26px;
+    font-size: 1rem;
+    line-height: 1.4375rem;
+  }
+
+  .first__letter {
+    position: static;
+    float: left;
+    margin-inline-end: 10px;
+    color: var(--main-text);
+    font-size: 46px;
+    line-height: 44px;
+    text-transform: uppercase;
+  }
+
+  .author__sub {
+    display: block;
+  }
+
+  .top__author_img {
+    max-width: 34%;
+    margin: 0 0 11px;
+  }
+
+  .card {
+    margin-block-start: 0;
+    margin-block-end: 40px;
+  }
+
+  .card__text {
+    margin: 22px 0 0;
+  }
+
+  .fact {
+    margin: 0 0 0 -20px;
+    padding: 16px 20px;
+    background-color: var(--fact-background);
+    inline-size: 100vw;
+  }
+
+  .opinion__text {
+    border-block-start: 1px solid var(--main-line);
+    padding-block-start: 1em;
+  }
+
+  .advertisement {
+    margin: 40px 0 90px;
+    border-block-start: 1px solid var(--advertisement-topline);
+    padding: 9px 0 15px;
+  }
+
+  .advertisement::before {
+    content: "Лучшее за все время";
+    display: block;
+    margin-block-end: 30px;
+    border-block-end: 1px solid var(--main-line);
+    padding-block-end: 13px;
+    color: var(--main-text);
+    font-family: var(--link-font);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    inline-size: 100%;
+    line-height: 1.0625rem;
+  }
+
+  .advertisement__link {
+    display: flex;
+  }
+
+  .advertisement__link::before,
+  .advertisement__text,
+  .advertisement__subtitle {
+    display: none;
+  }
+
+  .advertisement__title {
+    display: inline-block;
+    margin-inline-end: 5px;
+    margin-block-end: 0;
+    font-family: var(--link-font);
+    font-weight: 500;
+    font-size: 1.0625rem;
+    line-height: 1.1875rem;
+  }
+
+  .advertisement__title::after {
+    content: "9 мая 2018 г.";
+    display: inline-block;
+    color: var(--xs-text);
+    font-weight: 400;
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    text-transform: uppercase;
+  }
+
+  .advertisement__hidden {
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    block-size: auto;
+    max-inline-size: 210px;
+    inline-size: 33%;
+  }
+}
