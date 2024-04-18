@@ -455,7 +455,7 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
-  max-width: 1050px;
+  max-width: 1250px;
   margin: 0 auto 16px;
   border-top: 1px solid var(--main-line);
   padding-block-start: 9px;
@@ -584,7 +584,7 @@ body {
   .footer {
     flex-direction: column;
     align-items: center;
-    max-inline-size: 900px;
+    max-inline-size: 1000px;
   }
 
   .footer__list:first-of-type {
