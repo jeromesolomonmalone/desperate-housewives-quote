@@ -271,14 +271,6 @@ body {
   aspect-ratio: 1.777 / 1;
 }
 
-.card__video__right {
-  object-position: center right;
-}
-
-.card__video__left {
-  object-position: center left;
-}
-
 .card__title {
   position: relative;
   margin: 47px auto 0;
@@ -435,12 +427,12 @@ body {
   letter-spacing: 0.01em;
   text-decoration: 1px underline;
   text-decoration-color: var(--advertisement-line);
-  text-underline-offset: 8px;
-  transition: text-decoration 0.3s ease-out;
-  -webkit-text-decoration-line: 1px underline;
   -webkit-text-decoration-color: var(--advertisement-line);
+  -webkit-text-decoration-line: 1px underline;
   -webkit-text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
   -webkit-text-underline-offset: 8px;
+  transition: text-decoration 0.3s ease-out;
   -webkit-transition: text-decoration 0.3s ease-out;
 }
 
@@ -464,8 +456,8 @@ body {
 
 .footer {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 1230px;
   margin: 0 auto;
   border-top: 1px solid var(--main-line);
@@ -811,8 +803,8 @@ body {
     font-family: var(--link-font);
     font-weight: 700;
     font-size: 0.9375rem;
-    inline-size: 100%;
     line-height: 1.0625rem;
+    inline-size: 100%;
   }
 
   .advertisement__link {
