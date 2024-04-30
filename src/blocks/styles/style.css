@@ -259,7 +259,7 @@ video {
 
 .over {
   position: absolute;
-  top: calc(100vh - 20px * 9);
+  top: calc(100vh - 20px * 13);
   left: calc((100% - 600px) / 2);
   margin: 0 auto;
   color: var(--over-video);
@@ -433,7 +433,7 @@ video {
   }
 
   .top__main {
-    block-size: 70vh;
+    block-size: 50vh;
     inline-size: 100vw;
   }
 
