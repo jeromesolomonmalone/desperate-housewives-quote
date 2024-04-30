@@ -149,6 +149,9 @@ body {
   inset-inline: 0;
   inset-block-start: 50%;
   inline-size: max-content;
+  -webkit-transform: translateY(-50%);
+  -webkit-inset-inline: 0;
+  -webkit-inset-block-start: 50%;
 }
 
 .top__title {
@@ -430,7 +433,7 @@ video {
   }
 
   .top__main {
-    block-size: 100vh;
+    block-size: 70vh;
     inline-size: 100vw;
   }
 
