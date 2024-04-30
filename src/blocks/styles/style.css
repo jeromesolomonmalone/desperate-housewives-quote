@@ -259,7 +259,7 @@ video {
 
 .over {
   position: absolute;
-  top: calc(100vh - 20px * 11);
+  top: calc(100vh - 20px * 9);
   left: calc((100% - 600px) / 2);
   margin: 0 auto;
   color: var(--over-video);
