@@ -433,7 +433,8 @@ video {
   }
 
   .top__main {
-    block-size: 50vh;
+    margin-block-start: -30vh;
+    block-size: 100vh;
     inline-size: 100vw;
   }
 

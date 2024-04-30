@@ -149,6 +149,9 @@ body {
   inset-inline: 0;
   inset-block-start: 50%;
   inline-size: max-content;
+  -webkit-transform: translateY(-50%);
+  -webkit-inset-inline: 0;
+  -webkit-inset-block-start: 50%;
 }
 
 .top__title {
@@ -256,7 +259,7 @@ video {
 
 .over {
   position: absolute;
-  top: calc(100vh - 20px * 11);
+  top: calc(100vh - 20px * 13);
   left: calc((100% - 600px) / 2);
   margin: 0 auto;
   color: var(--over-video);
@@ -429,6 +432,7 @@ video {
   }
 
   .top__main {
+    margin-block-start: -30vh;
     block-size: 100vh;
     inline-size: 100vw;
   }
