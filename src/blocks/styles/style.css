@@ -156,7 +156,7 @@ body {
 .main__image {
   display: block;
   position: relative;
-  inline-size: clamp(10rem, 5.7143rem + 21.4286vw, 25rem);
+  inline-size: clamp(11.875rem, 8.0493rem + 18.8341vw, 25rem);
 }
 
 .main__image::after {
@@ -166,7 +166,7 @@ body {
   inline-size: 100%;
   block-size: 100%;
   background: linear-gradient(var(--shadow-color) 75%, var(--text-shadow));
-  border-radius: 27px;
+  border-radius: clamp(1.25rem, 0.8857rem + 1.7937vw, 2.5rem);
   top: 0;
   z-index: -1;
   transform: rotate(345deg);
@@ -174,9 +174,9 @@ body {
 
 .couple__picture {
   display: block;
-  border-radius: 27px;
+  border-radius: clamp(1.25rem, 0.8857rem + 1.7937vw, 2.5rem);
   inline-size: 100%;
-  aspect-ratio: 1/1.4;
+  aspect-ratio: 1/1.35;
   object-fit: cover;
   object-position: bottom;
 }
