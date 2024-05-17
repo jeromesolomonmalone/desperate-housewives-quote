@@ -166,7 +166,7 @@ body {
   inline-size: 100%;
   block-size: 100%;
   background: linear-gradient(var(--shadow-color) 75%, var(--text-shadow));
-  border-radius: 30px;
+  border-radius: 27px;
   top: 0;
   z-index: -1;
   transform: rotate(345deg);
@@ -174,7 +174,7 @@ body {
 
 .couple__picture {
   display: block;
-  border-radius: 30px;
+  border-radius: 27px;
   inline-size: 100%;
   aspect-ratio: 1/1.4;
   object-fit: cover;
