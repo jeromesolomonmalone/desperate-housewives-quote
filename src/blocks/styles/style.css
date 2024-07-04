@@ -2,7 +2,7 @@
   --background-main: #fbf6f2;
   --background-other: #1b1b1b;
   --font-title: "Cormorant Infant";
-  --font-main: "Roboto Condensed";
+  --font-main: "Montserrat";
   --font-shadow: "Pinyon Script";
   --main-color: #27241f;
   --shadow-color: #f0ebe7;
@@ -156,7 +156,7 @@ body {
 .main__image {
   display: block;
   position: relative;
-  inline-size: clamp(11.875rem, 8.0493rem + 18.8341vw, 25rem);
+  inline-size: clamp(10rem, 5.7143rem + 21.4286vw, 25rem);
 }
 
 .main__image::after {
@@ -166,7 +166,7 @@ body {
   inline-size: 100%;
   block-size: 100%;
   background: linear-gradient(var(--shadow-color) 75%, var(--text-shadow));
-  border-radius: clamp(1.25rem, 0.8857rem + 1.7937vw, 2.5rem);
+  border-radius: 30px;
   top: 0;
   z-index: -1;
   transform: rotate(345deg);
@@ -174,11 +174,11 @@ body {
 
 .couple__picture {
   display: block;
-  border-radius: clamp(1.25rem, 0.8857rem + 1.7937vw, 2.5rem);
+  border-radius: 30px;
   inline-size: 100%;
-  aspect-ratio: 1/1.35;
+  aspect-ratio: 1/1.5;
   object-fit: cover;
-  object-position: bottom;
+  object-position: top;
 }
 
 .title_with_shadow {
@@ -384,8 +384,8 @@ body {
 
 .dress_code__logo {
   display: block;
-  margin: 3.125rem auto 5rem;
-  inline-size: clamp(10rem, 6.6071rem + 16.9643vw, 21.875rem);
+  margin: 0 auto 5rem;
+  inline-size: clamp(10rem, 0.3409rem + 48.2955vw, 31.25rem);
   block-size: auto;
 }
 
@@ -419,6 +419,44 @@ body {
   text-align: right;
   white-space: nowrap;
   z-index: -1;
+}
+
+.reference {
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  inline-size: clamp(18.75rem, 13.0682rem + 28.4091vw, 31.25rem);
+}
+
+.reference__block {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  inline-size: 100%;
+}
+
+.reference__right {
+  margin-block-start: 30%;
+}
+
+.reference__photo {
+  inline-size: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+.post__scriptum {
+  display: flex;
+  align-items: center;
+}
+
+.post__scriptum__image {
+  display: inline-block;
+  inline-size: 64px;
+  block-size: 64px;
+  object-fit: contain;
+  object-position: center;
+  vertical-align: top;
 }
 
 .timer__items {
@@ -455,5 +493,15 @@ body {
   .timing__items {
     display: flex;
     flex-direction: column;
+  }
+
+  .post__scriptum {
+    flex-direction: column;
+    margin-block-start: 4.375rem;
+  }
+
+  .dress_code p {
+    text-align: center;
+    padding: 2.5rem 3vw 4.375rem;
   }
 }
