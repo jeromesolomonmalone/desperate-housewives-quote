@@ -25,7 +25,8 @@ img {
   font-family: Montserrat;
   background-color: #0a259c;
   min-inline-size: 375px;
-  min-block-size: 100vh;
+  min-block-size: 100%;
+  height: -webkit-fill-available;
 }
 
 body::-webkit-scrollbar {

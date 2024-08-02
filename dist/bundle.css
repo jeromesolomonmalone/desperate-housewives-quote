@@ -22,10 +22,11 @@ img {
 .body {
   margin: 0;
   padding: 55px 0;
-  font-family: "Montserrat";
+  font-family: Montserrat;
   background-color: #0a259c;
   min-inline-size: 375px;
-  min-block-size: 100vh;
+  min-block-size: 100%;
+  height: -webkit-fill-available;
 }
 
 body::-webkit-scrollbar {
@@ -119,7 +120,7 @@ body::-webkit-scrollbar {
   border-radius: 980px;
   padding: 11px 21px;
   color: #f5f5f7;
-  font-family: "Montserrat";
+  font-family: Montserrat;
   font-weight: 600;
   font-size: 17px;
   letter-spacing: -0.022em;
@@ -209,7 +210,7 @@ body::-webkit-scrollbar {
   .quote_middle_size {
     font-size: 40px;
     line-height: 1.1;
-    letter-spacing: 0em;
+    letter-spacing: 0;
   }
 
   .quote_min_size {
@@ -229,7 +230,7 @@ body::-webkit-scrollbar {
   .quote_max_size {
     font-size: 40px;
     line-height: 1.1;
-    letter-spacing: 0em;
+    letter-spacing: 0;
   }
 
   .quote_middle_size {
